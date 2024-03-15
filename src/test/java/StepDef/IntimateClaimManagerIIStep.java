@@ -28,9 +28,9 @@ public class IntimateClaimManagerIIStep {
         IntimateClaimManagerII.NavigateBackAsManagerr();
 
 //
-//    IntimateClaimII.Pay();
-//    IntimateClaimII.BatchPay();
-//
+//        IntimateClaimManagerII.Pay();
+//        IntimateClaimManagerII.BatchPay();
+
 
         IntimateClaimManagerII.ManageT();
         IntimateClaimManagerII.PaymentAp();
@@ -38,22 +38,22 @@ public class IntimateClaimManagerIIStep {
         IntimateClaimManagerII.DetailsTab();
 //
 
-        IntimateClaimManagerII.MBurgerI();
-        IntimateClaimManagerII.PayC();
-        IntimateClaimManagerII.PopUp();
-        IntimateClaimManagerII.Comments(ReccoCom);
-        IntimateClaimManagerII.SCommentBtnII();
+//        IntimateClaimManagerII.MBurgerI();
+//        IntimateClaimManagerII.PayC();
+//        IntimateClaimManagerII.PopUp();
+//        IntimateClaimManagerII.Comments(ReccoCom);
+//        IntimateClaimManagerII.SCommentBtnII();
         IntimateClaimManagerII.MBurgerII();
         IntimateClaimManagerII.PayCII();
         IntimateClaimManagerII.PopUp();
         IntimateClaimManagerII.CommentsII(ReccoComII);
         IntimateClaimManagerII.SCommentBtnII();
 
-        IntimateClaimManagerII.MBurgerIII();
-        IntimateClaimManagerII.PayCIII();
-        IntimateClaimManagerII.PopUp();
-        IntimateClaimManagerII.CommentsIII(ReccoComIII);
-        IntimateClaimManagerII.SCommentBtnII();
+//        IntimateClaimManagerII.MBurgerIII();
+//        IntimateClaimManagerII.PayCIII();
+//        IntimateClaimManagerII.PopUp();
+//        IntimateClaimManagerII.CommentsIII(ReccoComIII);
+//        IntimateClaimManagerII.SCommentBtnII();
 
 
 

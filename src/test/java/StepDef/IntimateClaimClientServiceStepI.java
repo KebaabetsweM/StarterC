@@ -24,18 +24,21 @@ IntimateClaimClientServiceI IntimateClaimClientServiceI;
     @Then("a consultant then begins to intimate {string},{string},{string},{string},{string},{string},{string},{string}, {string}")
     public void aConsultantThenBeginsToIntimateInsLMainLifeDOAMainLifeDODFirstNameSnameStittleIdentityNoCellNoEmAd(String InsL, String mainLifeDOA, String mainLifeDOD, String FirstName,String Sname, String Stittle, String IdentityNo, String CellNo, String EmAd) throws InterruptedException {
 
-        //IntimateClaimClientServiceI.Det();
+//        IntimateClaimClientServiceI.Det();
         IntimateClaimClientServiceI.CPolicy();
         IntimateClaimClientServiceI.PIndividuals();
         IntimateClaimClientServiceI.InsuredLifeXpath(InsL);
-        IntimateClaimClientServiceI.HospitalClaimType();
-        IntimateClaimClientServiceI.AccidentAR();
-        IntimateClaimClientServiceI.SelectDoA(mainLifeDOA);
+        IntimateClaimClientServiceI.Death();
+        IntimateClaimClientServiceI.Unatural();
+//        IntimateClaimClientServiceI.SelectDoA(mainLifeDOA);
         IntimateClaimClientServiceI.SelectDoD(mainLifeDOD);
         IntimateClaimClientServiceI.Save();
-        IntimateClaimClientServiceI.IBtn();
-        IntimateClaimClientServiceI.PTab();
-        IntimateClaimClientServiceI.IntBtn();
+
+//        IntimateClaimClientServiceI.IBtn();
+//       // IntimateClaimClientServiceI.PTab();
+//        IntimateClaimClientServiceI.IntBtn();
+//
+        IntimateClaimClientServiceI.Int();
         IntimateClaimClientServiceI.FirstName(FirstName);
         IntimateClaimClientServiceI.Sur(Sname);
         IntimateClaimClientServiceI.STitle(Stittle);
@@ -44,7 +47,7 @@ IntimateClaimClientServiceI IntimateClaimClientServiceI;
         IntimateClaimClientServiceI.EmailAD(EmAd);
         IntimateClaimClientServiceI.CreateC();
     }
-
+//Try and catch
 
 
 }

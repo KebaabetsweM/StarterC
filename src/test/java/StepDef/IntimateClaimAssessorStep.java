@@ -31,7 +31,7 @@ public class IntimateClaimAssessorStep extends PageObject {
         IntimateClaimAssessor.highlightsDropDown();
         IntimateClaimAssessor.Savebutn();
         IntimateClaimAssessor.NavigatesBack();
-        IntimateClaimAssessor.Det();
+      //  IntimateClaimAssessor.Det();
         IntimateClaimAssessor.CABurgerMenu();
         IntimateClaimAssessor.AssignToAssessor();
         IntimateClaimAssessor.AssessorCII();
@@ -42,24 +42,13 @@ public class IntimateClaimAssessorStep extends PageObject {
         IntimateClaimAssessor.UserRoleII(UserRi);
         IntimateClaimAssessor.highlightDropDownI();
         IntimateClaimAssessor.SaveBttn();
-        IntimateClaimAssessor.NavigateBackAsAssessor();
-        IntimateClaimAssessor.MyLClaims();
-        IntimateClaimAssessor.CGDetailsII();
-        IntimateClaimAssessor.PolicyHeader();
-        IntimateClaimAssessor.AddClaimant();
-        IntimateClaimAssessor.FirstName(FirstName);
-        IntimateClaimAssessor.Sur(Sname);
-        IntimateClaimAssessor.STitle(Stittle);
-        IntimateClaimAssessor. IdNo(IdentityNo);
-        IntimateClaimAssessor.CNum(CellNo);
-        IntimateClaimAssessor.EmailAD(EmAd);
-        IntimateClaimAssessor.CreateC();
 
 
-//
-//
+
+
+// These are for policies that have warnings
+
 //        IntimateClaimAssessor.RWarning();
-//
 //        IntimateClaimAssessor.WarningR();
 //        IntimateClaimAssessor.RecommendWRComment(Comment);
 //        IntimateClaimAssessor.SaveWBtn();

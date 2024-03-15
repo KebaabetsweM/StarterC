@@ -6,5 +6,5 @@ Feature: Life Claims
     Then  A consultant changes roles to being an assessor and continues to intimate claim '<UserRr>','<UserRi>','<Comment>','<CommentII>','<CommentIII>','<CommentIIII>','<FirstName>','<Sname>','<Stittle>','<IdentityNo>','<CellNo>','<EmAd>'
 
     Examples:
-    |PolicyNumber|UserRr        |UserRi  |Comment  |CommentII|CommentIII | CommentIIII|FirstName|Sname|Stittle|IdentityNo   |CellNo    |EmAd         |
-    |612718865   |Claims Manager|Assessor|CommentII|CommentII|Life Claims|Life Claims |Temoso   |Memo |Miss   |9902197343278|0736369275|Tem@gmail.com|
+    |PolicyNumber|UserRr        |UserRi  |Comment  |CommentII|CommentIII | CommentIIII|FirstName|Sname|Stittle|IdentityNo   |CellNo    |EmAd        |
+    |616211465   |Claims Manager|Assessor|CommentII|CommentII|Life Claims|Life Claims |Silo     |Fene|Miss    |9903066024726|0736369275|Tem@gmail.com|

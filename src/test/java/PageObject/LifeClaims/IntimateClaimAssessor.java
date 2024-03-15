@@ -26,8 +26,8 @@ public class IntimateClaimAssessor extends PageObject {
     String UserRoleXpath = "//select[@id='UserRole']";
     String SaveBtnXpath = "//*[@id=\"modalFormSubmit\"]";
 
-    String ABurgerMenuXpath = "//*[@id=\"tab-claimEvents\"]/div/div/div/div[1]/div/div[17]/button/i";
-    String AsignToAssessorXpath = "//*[@id=\"tab-claimEvents\"]/div/div/div/div[1]/div/div[17]/ul/li[8]/a";
+    String ABurgerMenuXpath = "//div[@data-bind=\"visible: $root.context() == 'ClaimGroup' && ($root.user().userRole() == 'ClaimsManager' || $root.user().userRole() == 'SystemAdministrator') && status() != 'Complete' && status() != 'Closed' && status() != 'Deleted' && status() != 'NoClaim' && status() != 'NoClaimant'\"]//button[@title='Click to see claim actions']";
+    String AsignToAssessorXpath = "//a[normalize-space()='Assign To Assessor']";
 
     String AssessorXpath = "//*[@id=\"user-selector\"]/table/tbody/tr[52]/td[1]";
 
@@ -52,6 +52,9 @@ public class IntimateClaimAssessor extends PageObject {
 
     String BurgerMenuIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[1]/div[7]/div[1]/div[1]/button";
 
+
+
+
     String RecoWRIIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[10]/div[7]/div[1]/div[1]/ul/li[1]/a";
     String RecommendWRXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[1]/div[7]/div[1]/div[1]/button";
     String RecoWIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[7]/div[7]/div[1]/div[1]/ul/li[1]/a";
@@ -68,7 +71,7 @@ public class IntimateClaimAssessor extends PageObject {
 
 
 
-
+// Inspect the button where i add myself as an assessor
 
     @Step("Open Life Claims usermanagement")
     public void NavigatesToWebsite() throws InterruptedException {
@@ -132,14 +135,14 @@ public class IntimateClaimAssessor extends PageObject {
     @Step("Navigate back")
     public void NavigatesBack() throws InterruptedException {
         Thread.sleep(3000);
-        getDriver().navigate().to("http://claimstest.clientele.local/Search/FullTextSearch?text=612718865");
+        getDriver().navigate().to("http://claimstest.clientele.local/ClaimGroup/ClaimGroupIndex?claimGroupId=e3028cfe-b210-ca85-a3ac-08dc42584989"); //Always change navigation url
         getDriver().navigate().refresh();
 
     }
 
     @Step("Click on the details")
     public void Det(){
-        $(By.xpath(DetXpath)).click();
+        $(By.xpath("//a[@class='well accordion-toggle psCollapsible']")).click();
     }
     //Burger menu xpath differ
     @Step("Click on the burger menu")
@@ -230,7 +233,7 @@ public class IntimateClaimAssessor extends PageObject {
 
         @Step("Navigate back to claim group ")
         public void NavigateBackAsAssessor() throws InterruptedException {
-        getDriver().get("http://claimstest.clientele.local/Search/FullTextSearch?text=612718865");
+        getDriver().get("http://claimstest.clientele.local/ClaimGroup/ClaimGroupIndex?claimGroupId=3953c294-8a4e-c8e1-bee7-08dc3e886550");
         getDriver().navigate().refresh();
         Thread.sleep(3000);
     }
@@ -241,7 +244,11 @@ public class IntimateClaimAssessor extends PageObject {
         Thread.sleep(9000);
         $(By.xpath(MyClaimsXpath)).click();
     }
+
+
+
 // xpath differs
+    //  Refresh
     @Step("Click on the details of your choice")
     public void CGDetailsII() {
         $(By.xpath(CGDetailsXpath)).click();

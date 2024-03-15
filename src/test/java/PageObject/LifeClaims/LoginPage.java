@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 
 public class LoginPage extends PageObject {
-    String URLXpath = "http://kmolale:Kebaabetswem@03@claimstest.clientele.local/";
+    String URLXpath = "http://kmolale:Kebaabetswem@25@claimstest.clientele.local/";
     String SearchTxtBoxXpath = "//*[@id=\"txtSearch\"]";
     String SearchBtnXpath = "//*[@id=\"btnSearch\"]";
 
@@ -27,7 +27,7 @@ public class LoginPage extends PageObject {
         fieldText.sendKeys(PolicyNumber);
 
     }
-    @Step("Click  OK button to capture ID")
+    @Step("Click  on search")
     public void ClickSearch() throws InterruptedException {
         Thread.sleep(3000);
 

@@ -9,7 +9,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +31,7 @@ public class IntimateClaimClientServiceI extends PageObject {
     //
     String ActivePolicyXpath = "//*[@id=\"accordionPolicy\"]/div/div[1]/h3/a";
     //
-    String PolicyIndiviualXpath = "//*[@id=\"612718865\"]/div/div/ul/li[2]/a";
+    String PolicyIndiviualXpath = "/html[1]/body[1]/div[2]/section[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/a[1]";
     //
     String InsuredLifeXpath = "//*[@id=\"InsuredLife\"]";
 
@@ -42,7 +44,7 @@ public class IntimateClaimClientServiceI extends PageObject {
     String HospitalXpath = "//*[@id=\"Hospital\"]";
     String AccidentXpath = "//*[@id=\"Hospital-step1\"]/div/div/button[2]/strong";
     String DOAXpath = "//*[@id=\"dateEvent\"]";
-    String DODXpath = "//*[@id=\"dateHospitalDischarge\"]";
+    String DODXpath = "//*[@id=\"dateEvent\"]";
 
     String IntimatePathXpath = "//*[@id=\"IntimationForm\"]/fieldset/div/div[2]/div";
 
@@ -60,6 +62,38 @@ public class IntimateClaimClientServiceI extends PageObject {
 
     String NWCreateClaimantXpath = "//*[@id=\"formSubmit\"]";
 
+
+    String HospitalisationNoticeXpath = "//*[@id=\"HospitalisationNotice\"]";
+    String IllnessXpath = "//*[@id=\"HospitalisationNotice-step1\"]/div/div/button[1]";
+    String AccidentAXpath = "//*[@id=\"HospitalisationNotice-step1\"]/div/div/button[2]";
+    String MaternityXpath = "//*[@id=\"HospitalisationNotice-step1\"]/div/div/button[3]/strong";
+    String HRehospitalisationsXpath = "//*[@id=\"HospitalisationNotice-step1\"]/div/div/button[4]/strong";
+
+
+    String DisabilityXpath = "//*[@id=\"Disability\"]";
+    String DIllnessXpath = "//*[@id=\"Disability-step1\"]/div/div/button[1]/strong";
+    String DAccidentAXpath = "//*[@id=\"Disability-step1\"]/div/div/button[2]/strong";
+
+
+    String IllnessCXpath = "";
+    String CancerXpath = "";
+    String HeartAttackXpath = "";
+    String StrokeXpath = "";
+    String RenalFailureXpath = "";
+    String OrganTransplantXpath = "";
+    String ComaXpath = "";
+    String CABGXpath = "";
+
+
+    String TerminalIllnessXpath = "";
+    String TCancerXpath = "";
+    String TRenalFailureXpath = "";
+    String OtherXpath = "";
+
+
+    String DeathXpath = "//*[@id=\"Death\"]/strong";
+    String NaturalXpath = "//*[@id=\"Death-step1\"]/div/div/button[1]";
+    String UnaturalXpath = "//*[@id=\"Death-step1\"]/div/div/button[2]";
 
     @Step("Open Life Claims usermanagement")
     public void NavigatesToWebsiteII() throws InterruptedException {
@@ -84,8 +118,13 @@ public class IntimateClaimClientServiceI extends PageObject {
 
     @Step("Click on Policy Individuals")
     public void PIndividuals() throws InterruptedException {
-        Thread.sleep(3000);
-        $(By.xpath(PolicyIndiviualXpath)).click();
+//        Thread.sleep(3000);
+//        $(By.xpath(PolicyIndiviualXpath)).click();
+
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
+        WebElement policyTab = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("psTabItem")));
+        policyTab.click();
 
     }
 
@@ -118,7 +157,7 @@ public class IntimateClaimClientServiceI extends PageObject {
 
     @Step("Click on the intimate button")
     public void IBtn() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         $(By.xpath(IntimateBtnXpath)).click();
     }
 
@@ -128,10 +167,31 @@ public class IntimateClaimClientServiceI extends PageObject {
     }
 
     @Step("Click on the intimate btn for the second time")
-    public void IntBtn() throws  InterruptedException{
-        Thread.sleep(5000);
+    public void IntBtn() throws InterruptedException {
+
         $(By.xpath(IntimateBtXpath)).click();
+        Thread.sleep(5000);
+
+        if (isWarningPresent()) {
+            $(By.xpath("//a[@id='btnShowClaimant']")).click();
+            Thread.sleep(10000);
+        } else {
+            System.out.println("No warning detected. proceeding without clicking");
+        }
+
     }
+
+    private boolean isWarningPresent() {
+        try {
+            return $(By.xpath("//a[@id='btnShowClaimant']")).isVisible();
+
+        } catch (Exception e) {
+            return false;
+        }
+
+
+    }
+
 
     @Step("Enter Name on field text")
     public void FirstName(String FirstName) {
@@ -183,14 +243,15 @@ public class IntimateClaimClientServiceI extends PageObject {
 
 
     @Step("Click on the hospital option on the claim type ")
-    public  void HospitalClaimType(){
+    public void HospitalClaimType() {
         $(By.xpath(HospitalXpath)).click();
 
-}
-@Step("Click on the accident option")
-public  void AccidentAR(){
+    }
+
+    @Step("Click on the accident option")
+    public void AccidentAR() {
         $(By.xpath(AccidentXpath)).click();
-}
+    }
 
     @Step("Enter the date of admission")
     public void SelectDoA(String mainLifeDOA) throws InterruptedException {
@@ -202,6 +263,7 @@ public  void AccidentAR(){
 
         DoA.sendKeys(mainLifeDOA + Keys.ENTER);
     }
+
     @Step("Enter the date of discharge")
     public void SelectDoD(String mainLifeDOD) throws InterruptedException {
         Thread.sleep(5000);
@@ -212,10 +274,83 @@ public  void AccidentAR(){
 
         DoD.sendKeys(mainLifeDOD + Keys.ENTER);
     }
+
     @Step("Click on intimate path")
-    public  void Save  (){
+    public void Save() {
         $(By.xpath(IntimatePathXpath)).click();
 
     }
-}
 
+    @Step("Click on the Death option on the claim type ")
+    public void Death() {
+        $(By.xpath(DeathXpath)).click();
+
+    }
+
+    @Step("Click on the Natural option")
+    public void Natural() {
+        $(By.xpath(NaturalXpath)).click();
+    }
+
+
+    @Step("Click on the Unatural option")
+    public void Unatural() {
+        $(By.xpath(UnaturalXpath)).click();
+    }
+
+
+    @Step("Click on intimate button")
+    public void Int() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(IntimateBtnXpath))).click();
+
+
+        if (isWarningSecIntimateBtnPresent()) {
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(IntimateBtnXpath))).click();
+        } else {
+            System.out.println("No warning detected. Proceeding without clicking");
+        }
+    }
+
+    //
+    private boolean isWarningSecIntimateBtnPresent() {
+        try {
+            return $(By.xpath("//*[@id=\"ClaimantFirstName\"]")).isVisible();
+
+        } catch (Exception e) {
+            return false;
+
+
+        }
+
+
+//     @Step("Click on the intimate btn for the second time")
+//    public void IntBtn() throws InterruptedException {
+//
+//        $(By.xpath(IntimateBtXpath)).click();
+//        Thread.sleep(5000);
+//
+//        if (isWarningPresent()) {
+//            $(By.xpath("//a[@id='btnShowClaimant']")).click();
+//            Thread.sleep(10000);
+//        } else {
+//            System.out.println("No warning detected. proceeding without clicking");
+//        }
+//
+//    }
+//
+//    private boolean isWarningPresent() {
+//        try {
+//            return $(By.xpath("//a[@id='btnShowClaimant']")).isVisible();
+//
+//        } catch (Exception e) {
+//            return false;
+//        }
+//
+//
+//    }
+
+    }
+}

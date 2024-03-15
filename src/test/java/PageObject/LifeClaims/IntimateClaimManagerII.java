@@ -24,14 +24,14 @@ public class IntimateClaimManagerII extends PageObject {
     String DetailsApXpath = "//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[2]/table/tbody/tr/td[10]";
     String PolicyTabXpath = "//*[@id=\"tab-claimEvents\"]/div/div/div/div[1]/h3/a";
     String PayIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[1]/div[9]/div[3]/div/button";
-    String PayCXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[1]/div[9]/div[3]/div/ul/li[1]/a";
+    String PayCXpath = "//*[@id=\"tabClaims-1ccce18f-8b08-c99e-104c-08dc3e88b45d\"]/div[1]/div/div/div/div/div[1]/div[9]/div[3]/div/ul/li[1]/a";
     String YesXpath = "//*[@id=\"bsPromptModalPositiveBtn\"]";
     String CommentTxtBXpath = "//*[@id=\"txtComment\"]";
     String PayCIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[7]/div[9]/div[3]/div/ul/li[1]/a";
     String PayIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[7]/div[9]/div[3]/div/button/i";
     String SvBtnXpath = "//*[@id=\"btnSaveComment\"]";
     String PayIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[4]/div[9]/div[3]/div/button";
-    String PayCIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[4]/div[9]/div[3]/div/ul/li[1]/a";
+    String PayCIIXpath = "//*[@id=\"tabClaims-1ccce18f-8b08-c99e-104c-08dc3e88b45d\"]/div[1]/div/div/div/div/div[4]/div[9]/div[3]/div/ul/li[1]/a";
 
 
 
@@ -127,7 +127,7 @@ public class IntimateClaimManagerII extends PageObject {
 
     @Step("Click MBurger menu I")
     public void MBurgerI() {
-        $(By.xpath(PayIXpath)).click();
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(11) > div:nth-child(3) > div:nth-child(1) > button:nth-child(1)")).click();
     }
 
     @Step("Click on pay Claim I")
@@ -152,7 +152,7 @@ public class IntimateClaimManagerII extends PageObject {
 
     @Step("Click MBurger menu II")
     public void MBurgerII() {
-        $(By.xpath(PayIIXpath)).click();
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(11) > div:nth-child(3) > div:nth-child(1) > button:nth-child(1)")).click();
     }
 
     @Step("Click on pay Claim II")

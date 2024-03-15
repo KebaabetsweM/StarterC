@@ -5,4 +5,4 @@ Feature: Intimate Claim as  Manager
     Then a manager approves comments '<UserRM>','<Comms>','<Comms2>','<Comms3>','<Comms4>'
       Examples:
         |PolicyNumber| UserRM       | Comms     | Comms2    | Comms3    | Comms4    |
-        |616251153   |Claims Manager|Life Claims|Life Claims|Life Claims|Life Claims|
+        |616211465   |Claims Manager|Life Claims|Life Claims|Life Claims|Life Claims|

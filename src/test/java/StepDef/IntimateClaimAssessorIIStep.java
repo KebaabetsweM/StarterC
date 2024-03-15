@@ -19,12 +19,13 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 
     }
 
-     @Then("A consultant changes roles to being an assessor and continues to intimate claim  {string}, {string}, {string}, {string}, {string}, {string},{string}, {string},{string}, {string}, {string}, {string}, {string}, {string}, {string},")
-     public void aConsultantChangesRolesToBeingAnAssessorAndContinuesToIntimateClaimFailedCSearchBSpecSpecAPercentagePercentageIIPercentageIIIAccTBankNmBCodeAccReccoReccoIReccoIIReccoIII(String FailedC, String SearchB, String Spec, String SpecA, String  Percentage, String PercentageII, String PercentageIII,String AccT, String BankNm, String Acc,String BCode, String Recco, String ReccoI, String ReccoII, String ReccoIII) throws InterruptedException {
+    @Then("A consultant changes roles to being an assessor and continues to intimate claim  {string}, {string}, {string}, {string}, {string}, {string},{string}, {string},{string}, {string}, {string}, {string}, {string}, {string}, {string},{string},{string},{string},{string}")
+    public void aConsultantChangesRolesToBeingAnAssessorAndContinuesToIntimateClaimFailedCSearchBSpecSpecAPercentagePercentageIIPercentageIIIAccTBankNmBCodeAccReccoReccoIReccoIIReccoIIIBenNameBenSurBentittleBenIDS(String FailedC, String SearchB, String Spec, String SpecA, String  Percentage, String PercentageII, String PercentageIII,String AccT, String BankNm, String Acc,String BCode, String Recco, String ReccoI, String ReccoII, String ReccoIII,String BenIDS, String BenName, String BenSur, String Bentittle) throws InterruptedException {
 
         IntimateClaimAssessorII.NavigateBackAsAnAssesssor();
 //        IntimateClaimAssessorII.MClaims();
 //        IntimateClaimAssessorII.NxtContact();
+
 //        IntimateClaimAssessorII.DetailsX();
 //        IntimateClaimAssessorII.Cpolicy();
 //        IntimateClaimAssessorII.ClaimantA();
@@ -41,7 +42,7 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 //        IntimateClaimAssessorII.DPageXpath();
 //        IntimateClaimAssessorII.Sbox(SearchB);
 //        IntimateClaimAssessorII.Sbtn();
-//        IntimateClaimAssessorII.CheckB();
+//        IntimateClaimAssessorII.CheckB(); // Always change xpath
 //        IntimateClaimAssessorII.DocA(Spec);
 //        IntimateClaimAssessorII.APage();
 //        IntimateClaimAssessorII.Doc();
@@ -67,100 +68,128 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 //        IntimateClaimAssessorII.CPolicy();
 //        IntimateClaimAssessorII.Req();
 //        IntimateClaimAssessorII.DocViewID();
- //       IntimateClaimAssessorII.PageC();
+//        //IntimateClaimAssessorII.PageC();
 //        IntimateClaimAssessorII.ApProveA();
 
 
 
 // Form
-//        IntimateClaimAssessorII.MClaims();
-//        IntimateClaimAssessorII.NDoc();
-//        IntimateClaimAssessorII.DocDetails();
-//        IntimateClaimAssessorII.CPolicy();
-//        IntimateClaimAssessorII.Req();
-//        IntimateClaimAssessorII.LifeClaimFR();   //Document viewer Xpath
-//       // IntimateClaimAssessorII.PageV();
-//        IntimateClaimAssessorII.ApProveA();
-
-
         IntimateClaimAssessorII.MClaims();
         IntimateClaimAssessorII.NDoc();
         IntimateClaimAssessorII.DocDetails();
-         IntimateClaimAssessorII.CPolicy();
+        IntimateClaimAssessorII.CPolicy();
         IntimateClaimAssessorII.Req();
+        IntimateClaimAssessorII.LifeClaimFR();
+      //  IntimateClaimAssessorII.PageV();
+        IntimateClaimAssessorII.ApProveA();
+
+//
+//        IntimateClaimAssessorII.MClaims();
+//        IntimateClaimAssessorII.NDoc();
+//        IntimateClaimAssessorII.DocDetails();// Change xpath always
+//
+//         IntimateClaimAssessorII.CPolicy();
+////         IntimateClaimAssessorII.Req();
+////
+//         IntimateClaimAssessorII.BoxID();
+//         IntimateClaimAssessorII.BoxIDComplete();
+//         IntimateClaimAssessorII.DeathCC();
+//         IntimateClaimAssessorII.NotA();
+
 
 //        IntimateClaimAssessorII.IDB();
 //        IntimateClaimAssessorII.CID();
-//
+//        IntimateClaimAssessorII.DeathC();
+//        IntimateClaimAssessorII.NADeathC();
+
 //         IntimateClaimAssessorII.HospitalPolicyCF();
 //         IntimateClaimAssessorII.NAHospitalPolicyCF();
-//
+
 //         IntimateClaimAssessorII.ClinicFile();
 //         IntimateClaimAssessorII.NAAClinicFile();
 //         IntimateClaimAssessorII.HospitalPCF();
 //         IntimateClaimAssessorII.NAHospitalPCF();
 //        IntimateClaimAssessorII.DCertificate();
-
+//
 //        IntimateClaimAssessorII.AffidavitB();
 //        IntimateClaimAssessorII.NAAffidavit();
 //         IntimateClaimAssessorII.PolicyF();
 //        IntimateClaimAssessorII.CComplete();
 
 
+//        IntimateClaimAssessorII.CoverS();
+//        IntimateClaimAssessorII.NACoverS();
 
 
-        //IntimateClaimAssessorII.CoverS();
-       // IntimateClaimAssessorII.NACoverS();
+
+
+
 //
+
+
+
 ////Add Ben
-        IntimateClaimAssessorII.CClaims();
-        IntimateClaimAssessorII.AddBen();
-        IntimateClaimAssessorII.AddB();
-        IntimateClaimAssessorII.AddS();
-        IntimateClaimAssessorII.close();
-        IntimateClaimAssessorII.VerBen();
-        IntimateClaimAssessorII.VBen();
-        IntimateClaimAssessorII.VerBen();
-        IntimateClaimAssessorII.MClaims();
-        IntimateClaimAssessorII.NDoc();
-        IntimateClaimAssessorII.DocDetails();
-        IntimateClaimAssessorII.CPolicy();
-        IntimateClaimAssessorII.Per(Percentage);
-        IntimateClaimAssessorII.PerII(PercentageII);
-        IntimateClaimAssessorII.PerIII(PercentageIII);
-        IntimateClaimAssessorII.Actions();
-        IntimateClaimAssessorII.ConfirmBAccount();
-        IntimateClaimAssessorII.AccType(AccT);
-        IntimateClaimAssessorII.BankN(BankNm);
-        IntimateClaimAssessorII.AccNo(Acc);
-        IntimateClaimAssessorII.BrunchC(BCode);
-        IntimateClaimAssessorII.SSaveB();
-        IntimateClaimAssessorII.Actions();
-        IntimateClaimAssessorII.VAcc();
-        IntimateClaimAssessorII.BurgerI();
-        IntimateClaimAssessorII.Reco();
-        IntimateClaimAssessorII.CommentR(Recco);
-        IntimateClaimAssessorII.Opt();
-        IntimateClaimAssessorII.SCommentBtn();
-        IntimateClaimAssessorII.Yes();
-        IntimateClaimAssessorII.BurgerIX();
-        IntimateClaimAssessorII.RecoI();
-        IntimateClaimAssessorII.CommentR(ReccoI);
-        IntimateClaimAssessorII.Opt();
-        IntimateClaimAssessorII.SCommentBtn();
-        IntimateClaimAssessorII.Yes();
-        IntimateClaimAssessorII.BurgerII();
-        IntimateClaimAssessorII.RecoII();
-        IntimateClaimAssessorII.Yes();
-        IntimateClaimAssessorII.CommentR(ReccoII);
+     //   IntimateClaimAssessorII.CClaims();
+//        IntimateClaimAssessorII.AddBen();
+//        IntimateClaimAssessorII.AddB();
+//        IntimateClaimAssessorII.AddS();
+//        IntimateClaimAssessorII.close();
+//        IntimateClaimAssessorII.VerBen();
+////        IntimateClaimAssessorII.VBen();
+//        IntimateClaimAssessorII.VerBen();
+//         IntimateClaimAssessorII.Act();
+//         IntimateClaimAssessorII.BenID();
+//         IntimateClaimAssessorII.BenIDInput(BenIDS);
+//         IntimateClaimAssessorII.ClickSearch();
+//         IntimateClaimAssessorII.NameBen(BenName);
+//         IntimateClaimAssessorII.SurBen(BenSur);
+//         IntimateClaimAssessorII.BType(Bentittle);
+//         IntimateClaimAssessorII.SaveBtn();
+
+//        IntimateClaimAssessorII.MClaims();
+//        IntimateClaimAssessorII.NDoc();
+//        IntimateClaimAssessorII.DocDetails();
+//        IntimateClaimAssessorII.CPolicy();
+//        IntimateClaimAssessorII.Per(Percentage);
+//        IntimateClaimAssessorII.PerII(PercentageII);
+//        IntimateClaimAssessorII.PerIII(PercentageIII);
+//           IntimateClaimAssessorII.Act(); // Always change xpath
+//        IntimateClaimAssessorII.ConfirmBAccount();  // Always change xpath
+//        IntimateClaimAssessorII.AccType(AccT);
+//        IntimateClaimAssessorII.BankN(BankNm);
+//        IntimateClaimAssessorII.AccNo(Acc);
+//        IntimateClaimAssessorII.BrunchC(BCode);
+//        IntimateClaimAssessorII.SSaveB();
+//        IntimateClaimAssessorII.Actions();
+//        IntimateClaimAssessorII.VAcc();
+//        IntimateClaimAssessorII.BurgerI();
+//        IntimateClaimAssessorII.Reco();
+//        IntimateClaimAssessorII.WYes();
+//        IntimateClaimAssessorII.CommentR(Recco);
+//
+//        //IntimateClaimAssessorII.Opt();
+//        IntimateClaimAssessorII.SCommentBtn();
+
+       // IntimateClaimAssessorII.Yes();
+//        IntimateClaimAssessorII.BurgerIX();
+//        IntimateClaimAssessorII.RecoI();
+//        IntimateClaimAssessorII.WYes();
+//        IntimateClaimAssessorII.CommentR(ReccoI);
+////        IntimateClaimAssessorII.Opt();
+//        IntimateClaimAssessorII.SCommentBtn();
+//        IntimateClaimAssessorII.Yes();
+//        IntimateClaimAssessorII.BurgerII();
+//        IntimateClaimAssessorII.RecoII();
+//        IntimateClaimAssessorII.Yes();
+//        IntimateClaimAssessorII.CommentR(ReccoII);
    // IntimateClaimAssessorII.Opt();
-        IntimateClaimAssessorII.SCommentBtnII();
-        IntimateClaimAssessorII.RecoIII();
-        IntimateClaimAssessorII.ReCcoIII();
-        IntimateClaimAssessorII.Yes();
-        IntimateClaimAssessorII.CommentR(ReccoIII);
-        IntimateClaimAssessorII.Opt();
-        IntimateClaimAssessorII.SCommentBtn();
+//        IntimateClaimAssessorII.SCommentBtnII();
+//        IntimateClaimAssessorII.RecoIII();
+//        IntimateClaimAssessorII.ReCcoIII();
+//        IntimateClaimAssessorII.Yes();
+//        IntimateClaimAssessorII.CommentR(ReccoIII);
+//        IntimateClaimAssessorII.Opt();
+//        IntimateClaimAssessorII.SCommentBtn();
 
     }
 

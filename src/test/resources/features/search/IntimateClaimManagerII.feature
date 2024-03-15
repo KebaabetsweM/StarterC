@@ -7,4 +7,4 @@ Feature: Claims Intimation
 
   Examples:
   |PolicyNumber|UserRM        |ReccoComm |ReccoCommII|ReccoCommIII|
-  |616251153   |Claims Manager|LifeClaims|LifeClaims |LifeClaims  |
+  |616211465   |Claims Manager|LifeClaims|LifeClaims |LifeClaims  |

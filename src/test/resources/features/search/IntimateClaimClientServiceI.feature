@@ -6,5 +6,9 @@ Feature: Intimate Claim as  Client service
 
 
     Examples:
-      |PolicyNumber|InsL                                |mainLifeDOA|mainLifeDOD|FirstName|Sname|Stittle|IdentityNo   |CellNo    |EmAd            |
-      |612718865   |Tshoba, Nomvuyo Ethelda (1964/07/27)|14/02/2024 |18/02/2024 |Kelo     |Phelo|Miss   |9601315914727|0823633636|kphelo@gmail.com|
+      |PolicyNumber|InsL                                   |mainLifeDOA|mainLifeDOD|FirstName|Sname |Stittle|IdentityNo   |CellNo    |EmAd           |
+      | 616211465  |Hlongwani, Nomsa Catherine (1981/02/13)|14/02/2024 |18/02/2024 |Lebitso  |Kolobe|Miss   |9503127830341|0827090989|herbs@gmail.com|
+
+
+#Insured InsL
+#  IdentityNo
