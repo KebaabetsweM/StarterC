@@ -16,8 +16,8 @@ public class IntimateClaimManagerIIStep {
         LoginPage.EnterPolicyNumber(PolicyNumber);
         LoginPage.ClickSearch();
     }
-    @Then("pays claim  {string}, {string}, {string},{string}")
-    public void paysClaimUserRMReccoCommReccoCommIIReccoCommIII(String UserRM, String ReccoCom, String ReccoComII, String ReccoComIII) throws InterruptedException {
+    @Then("pays claim  {string}, {string}, {string},{string},{string},{string}")
+    public void paysClaimUserRMReccoCommReccoCommIIReccoCommIIIReccoComIIIIReccoComL(String UserRM, String ReccoCom, String ReccoComII, String ReccoComIII, String ReccoComIIII, String ReccoComL) throws InterruptedException {
 
         IntimateClaimManagerII.NavigatesToUmanager();
         IntimateClaimManagerII.UserCA();
@@ -40,25 +40,34 @@ public class IntimateClaimManagerIIStep {
 
 //        IntimateClaimManagerII.MBurgerI();
 //        IntimateClaimManagerII.PayC();
-//        IntimateClaimManagerII.PopUp();
+//     //   IntimateClaimManagerII.PopUp();
 //        IntimateClaimManagerII.Comments(ReccoCom);
 //        IntimateClaimManagerII.SCommentBtnII();
-        IntimateClaimManagerII.MBurgerII();
-        IntimateClaimManagerII.PayCII();
-        IntimateClaimManagerII.PopUp();
-        IntimateClaimManagerII.CommentsII(ReccoComII);
-        IntimateClaimManagerII.SCommentBtnII();
+//        IntimateClaimManagerII.MBurgerII();
+//        IntimateClaimManagerII.PayCII();
+//     //   IntimateClaimManagerII.PopUp();
+//        IntimateClaimManagerII.CommentsII(ReccoComII);
+//        IntimateClaimManagerII.SCommentBtnII();
 
 //        IntimateClaimManagerII.MBurgerIII();
 //        IntimateClaimManagerII.PayCIII();
-//        IntimateClaimManagerII.PopUp();
+//        //IntimateClaimManagerII.PopUp();
 //        IntimateClaimManagerII.CommentsIII(ReccoComIII);
 //        IntimateClaimManagerII.SCommentBtnII();
 
+//        IntimateClaimManagerII.MBurgerIIII();
+//        IntimateClaimManagerII.PayCIIII();
+//       // IntimateClaimManagerII.PopUp();
+//        IntimateClaimManagerII.CommentsIIII(ReccoComIIII);
+//        IntimateClaimManagerII.SCommentBtnIIII();
 
+        IntimateClaimManagerII.MBurgerL();
+        IntimateClaimManagerII.PayCL();
+      //  IntimateClaimManagerII.PopUp();
+        IntimateClaimManagerII.CommentsL(ReccoComL);
+        IntimateClaimManagerII.SCommentBtnL();
 
     }
-
 
 
 }

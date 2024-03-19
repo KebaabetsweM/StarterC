@@ -56,7 +56,7 @@ public class IntimateClaimAssessorII extends PageObject {
     String ApproveIDXpah = "//*[@id=\"btnAcceptAll\"]";
 
     String NewDocXpath = "//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[1]/div[1]/ul/li[6]/a";
-    String NEWDocDetailsXpath = "//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[2]/table/tbody/tr[2]/td[10]"; //always change xpath  index xpath (change number)
+    String NEWDocDetailsXpath = "//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[2]/table/tbody/tr[5]/td[10]"; //always change xpath  index xpath (change number)
     String ClickPolicyXpath = "//*[@id=\"tab-claimEvents\"]/div/div/div/div[1]/h3/a";
 
 
@@ -78,10 +78,10 @@ public class IntimateClaimAssessorII extends PageObject {
     String DeathCXpath = "(//button[@data-toggle='dropdown'])[39]";
     String NADeathXpath = "//*[@id=\"requirementMainDiv-1ccce18f-8b08-c99e-104c-08dc3e88b45d\"]/table[1]/tbody/tr[3]/td[6]/div[2]/div/ul/li[1]/a";
 
-    String ClaimsXpath = "//*[@id=\"a0924835-6fbd-cb66-9c8f-08dc37730695\"]/div/div/ul/li[1]/a"; //change xpath
+    String ClaimsXpath = "//*[@id=\"c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div/div/ul/li[1]/a"; //change xpath
     String AddBenBurgerMenXpath = "(//button[@title='Click to see claim actions'])[4]"; //change xpath
     String OpAddBenXpath = "(//a[@data-bind='click: Clientele.ClaimGroup.Claim.AddBeneficary.bind($data, claimId(), claimEventId(), policyNumber())'][normalize-space()='Add Beneficiary'])[2]";
-    String AddBtnXpath = "//*[@id=\"tblPolicyIndividuals\"]/tbody/tr[3]/td[4]/button";
+    String AddBtnXpath = "//*[@id=\"tblPolicyIndividuals\"]/tbody/tr[1]/td[4]/button";
     String CloseXpath = "//*[@id=\"payments-modal\"]/div[1]/button";
     String ActionsDropdownXpath = "btn dropdown-toggle"; //CLASSNAME
     String VerBXpath = "//*[@id=\"tabClaims-a0924835-6fbd-cb66-9c8f-08dc37730695\"]/div[1]/div/div/div/div/div[2]/div/div/table/tbody/tr/td[18]/div/ul/li[1]/a";  //Change Xpath
@@ -99,7 +99,7 @@ public class IntimateClaimAssessorII extends PageObject {
     String CommentTxtBXpath = "//*[@id=\"txtComment\"]";
     String SvBtnXpath = "//*[@id=\"btnSaveComment\"]";
     String RecoIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[7]/div[7]/div[1]/div[1]/button";
-    String ReccoIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[7]/div[7]/div[1]/div[1]/ul/li[2]/a";
+    String ReccoIIIXpath = "//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[10]/div[7]/div[1]/div[1]/ul/li[2]/a";
     String SVBtnXpath = "//*[@id=\"btnSaveComment\"]";
     String YesOptXpath = "//*[@id=\"bsPromptModalPositiveBtn\"]";
     String RecoIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[4]/div[7]/div[1]/div[1]/button";
@@ -108,7 +108,7 @@ public class IntimateClaimAssessorII extends PageObject {
     String ReccoIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[1]/div[7]/div[1]/div[1]/ul/li[2]/a";
     String DignityPlanXpath = "//*[@id=\"chkClaimsToRecommendForPayment\"]/option[1]";
     String PayIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[1]/div[9]/div[3]/div/button";
-    String CBAccountXpath = "//*[@id=\"tabClaims-1ccce18f-8b08-c99e-104c-08dc3e88b45d\"]/div[1]/div/div/div/div/div[2]/div/div/table/tbody/tr[1]/td[18]/div/ul/li[5]/a";
+    String CBAccountXpath = "//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[2]/div/div/table/tbody/tr/td[18]/div/ul/li[5]/a";
 
     String PolicyClaimBXpath = "(//button[@class='btn btn-mini btn-primary dropdown-toggle'])[28]";
     String PolicyClaimCompleteXpath = "//div[@class='btn-group pull-right open']//a[@data-bind='click: Clientele.ClaimGroup.Requirement.RequirementNotRequired.bind($data, claimEventId(), requirementId())'][normalize-space()='Not Required']";
@@ -350,6 +350,10 @@ public class IntimateClaimAssessorII extends PageObject {
         $(By.xpath(MyClaimsAXpath)).click();
     }
 
+    @Step("Click on  my claims")
+    public void temp () {
+        $(By.xpath("//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[1]/div[1]/ul/li[7]/a")).click();
+    }
     @Step("Click on new documents")
     public void NDoc() {
         $(By.xpath(NewDocXpath)).click();
@@ -422,7 +426,7 @@ public class IntimateClaimAssessorII extends PageObject {
 
     @Step("Click on the first burger menue")
     public void RecoIII() {
-        $(By.xpath(RecoIIIXpath)).click();
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(10) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)")).click();
     }
 
     @Step("Click on the reccomendation payment")
@@ -442,7 +446,7 @@ public class IntimateClaimAssessorII extends PageObject {
 
     @Step("Click on the first burger menue a")
     public void BurgerII() {
-        $(By.xpath(RecoIIXpath)).click();
+        $(By.xpath("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)")).click();
     }
 
     @Step("Click on the reccomendation payment")
@@ -453,7 +457,7 @@ public class IntimateClaimAssessorII extends PageObject {
     @Step("Click on the first burger menue a")
     public void BurgerIX(){
 
-        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)")).click();
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1) > i:nth-child(1)")).click();
     }
 
     @Step("Click on the reccomendation payment")
@@ -467,7 +471,15 @@ public class IntimateClaimAssessorII extends PageObject {
         $(By.xpath(DignityPlanXpath)).click();
 
     }
+    @Step("Save the Comment afterwards")
+    public void BurgerIIII() {
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(13) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)")).click();
 
+    }
+    @Step("Recommend payment")
+    public void RecP(){
+        $(By.cssSelector("div[class='btn-group pull-right open'] a[data-bind='click: Clientele.ClaimGroup.Claim.OnRecommendationClaimPaymentClick.bind($data, claimId(), claimEventId())']")).click();
+    }
 
     @Step("Click on confirm bank account")
     public void ConfirmBAccount() throws InterruptedException {
@@ -584,18 +596,25 @@ public class IntimateClaimAssessorII extends PageObject {
 
     @Step("Click on complete Id")
     public void CID() {
-        $(By.xpath(CompleteIDBtnXpath)).click();
+        $(By.xpath("//*[@id=\"requirementMainDiv-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/table[1]/tbody/tr[2]/td[6]/div[1]/div[1]/ul/li[1]/a")).click();
     }
 
     @Step("Then click on complete")
     public void CComplete() {
         $(By.xpath(FCompleteXpath)).click();
     }
-
+    @Step("Then click on complete")
+    public void LifeP() {
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(6) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)")).click();
+    }
+    @Step("Then click on complete")
+    public void LifePComplete() {
+        $(By.xpath("//*[@id=\"requirementMainDiv-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/table[1]/tbody/tr[1]/td[6]/div[1]/div[1]/ul/li[1]/a")).click();
+    }
     @Step("Click on the ID burger menu")
     public void IDB() throws InterruptedException {
         Thread.sleep(5000);
-        $(By.xpath(CompleteBIDXpath)).click();
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(6) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)")).click();
     }
 
     @Step("Click on the burger menu of death certificate")
@@ -683,12 +702,12 @@ public class IntimateClaimAssessorII extends PageObject {
 
     @Step("Click on the Death certificate burger menu ")
     public void DeathC() {
-        $(By.xpath(DeathCXpath)).click();
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(6) > div:nth-child(2) > div:nth-child(1) > button:nth-child(1)")).click();
     }
 
     @Step("Click on the Death certificate burger menu and click not required ")
     public void NADeathC() {
-        $(By.xpath(NADeathXpath)).click();
+        $(By.xpath("//*[@id=\"requirementMainDiv-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/table[1]/tbody/tr[3]/td[6]/div[2]/div/ul/li[1]/a")).click();
     }
 
     @Step("Click on the document view of the ID")
@@ -816,11 +835,7 @@ public class IntimateClaimAssessorII extends PageObject {
         $(By.xpath(CloseXpath)).click();
     }
 
-    @Step("Click on actions and select verify beneficiary")
-    public void VerBen() {
-        $(By.xpath(ActionsDropdownXpath)).click();
 
-    }
 
     @Step("Click on verify beneficiary option")
     public void VBen() {
@@ -857,7 +872,12 @@ public class IntimateClaimAssessorII extends PageObject {
 
     @Step("Click on  actions ")
     public void Act(){
-        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(18) > div:nth-child(1) > a:nth-child(1)")).click();
+        $(By.xpath("//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[2]/div/div/table/tbody/tr/td[18]/div/a")).click();
+    }
+
+    @Step("Verify ben")
+    public void VerBen(){
+        $(By.xpath("//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[2]/div/div/table/tbody/tr/td[18]/div/ul/li[7]/a")).click();
     }
     @Step("Click identify beneficiary")
     public void BenID() {

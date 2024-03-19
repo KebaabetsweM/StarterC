@@ -19,12 +19,12 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 
     }
 
-    @Then("A consultant changes roles to being an assessor and continues to intimate claim  {string}, {string}, {string}, {string}, {string}, {string},{string}, {string},{string}, {string}, {string}, {string}, {string}, {string}, {string},{string},{string},{string},{string}")
-    public void aConsultantChangesRolesToBeingAnAssessorAndContinuesToIntimateClaimFailedCSearchBSpecSpecAPercentagePercentageIIPercentageIIIAccTBankNmBCodeAccReccoReccoIReccoIIReccoIIIBenNameBenSurBentittleBenIDS(String FailedC, String SearchB, String Spec, String SpecA, String  Percentage, String PercentageII, String PercentageIII,String AccT, String BankNm, String Acc,String BCode, String Recco, String ReccoI, String ReccoII, String ReccoIII,String BenIDS, String BenName, String BenSur, String Bentittle) throws InterruptedException {
+    @Then("A consultant changes roles to being an assessor and continues to intimate claim  {string}, {string}, {string}, {string}, {string}, {string},{string}, {string},{string}, {string}, {string}, {string}, {string}, {string}, {string},{string},{string},{string},{string}, {string}")
+    public void aConsultantChangesRolesToBeingAnAssessorAndContinuesToIntimateClaimFailedCSearchBSpecSpecAPercentagePercentageIIPercentageIIIAccTBankNmBCodeAccReccoReccoIReccoIIReccoIIIBenNameBenSurBentittleBenIDSReccoIIII(String FailedC, String SearchB, String Spec, String SpecA, String  Percentage, String PercentageII, String PercentageIII,String AccT, String BankNm, String Acc,String BCode, String Recco, String ReccoI, String ReccoII, String ReccoIII,String BenIDS, String BenName, String BenSur, String Bentittle, String ReccoIIII) throws InterruptedException {
 
         IntimateClaimAssessorII.NavigateBackAsAnAssesssor();
-//        IntimateClaimAssessorII.MClaims();
-//        IntimateClaimAssessorII.NxtContact();
+        IntimateClaimAssessorII.MClaims();
+        IntimateClaimAssessorII.NxtContact();
 
 //        IntimateClaimAssessorII.DetailsX();
 //        IntimateClaimAssessorII.Cpolicy();
@@ -74,29 +74,32 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 
 
 // Form
-        IntimateClaimAssessorII.MClaims();
-        IntimateClaimAssessorII.NDoc();
-        IntimateClaimAssessorII.DocDetails();
-        IntimateClaimAssessorII.CPolicy();
-        IntimateClaimAssessorII.Req();
-        IntimateClaimAssessorII.LifeClaimFR();
-      //  IntimateClaimAssessorII.PageV();
-        IntimateClaimAssessorII.ApProveA();
+//        IntimateClaimAssessorII.MClaims();
+//        IntimateClaimAssessorII.NDoc();
+//        IntimateClaimAssessorII.DocDetails();
+//        IntimateClaimAssessorII.CPolicy();
+//        IntimateClaimAssessorII.Req();
+//        IntimateClaimAssessorII.LifeClaimFR();
+//      //  IntimateClaimAssessorII.PageV();
+//        IntimateClaimAssessorII.ApProveA();
 
 //
 //        IntimateClaimAssessorII.MClaims();
-//        IntimateClaimAssessorII.NDoc();
-//        IntimateClaimAssessorII.DocDetails();// Change xpath always
+//       // IntimateClaimAssessorII.NDoc();
+//        IntimateClaimAssessorII.temp();
+        IntimateClaimAssessorII.DocDetails();// Change xpath always
 //
-//         IntimateClaimAssessorII.CPolicy();
-////         IntimateClaimAssessorII.Req();
+         IntimateClaimAssessorII.CPolicy();
+//         IntimateClaimAssessorII.Req();
 ////
 //         IntimateClaimAssessorII.BoxID();
 //         IntimateClaimAssessorII.BoxIDComplete();
 //         IntimateClaimAssessorII.DeathCC();
 //         IntimateClaimAssessorII.NotA();
 
-
+//        IntimateClaimAssessorII.LifeP();
+//        IntimateClaimAssessorII.LifePComplete();
+//
 //        IntimateClaimAssessorII.IDB();
 //        IntimateClaimAssessorII.CID();
 //        IntimateClaimAssessorII.DeathC();
@@ -129,13 +132,16 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 
 
 ////Add Ben
-     //   IntimateClaimAssessorII.CClaims();
+//        IntimateClaimAssessorII.CClaims();
 //        IntimateClaimAssessorII.AddBen();
 //        IntimateClaimAssessorII.AddB();
 //        IntimateClaimAssessorII.AddS();
 //        IntimateClaimAssessorII.close();
-//        IntimateClaimAssessorII.VerBen();
-////        IntimateClaimAssessorII.VBen();
+////        IntimateClaimAssessorII.VerBen();
+
+
+        // This is when the beneciary doesn't have an ID number
+//        IntimateClaimAssessorII.VBen();
 //        IntimateClaimAssessorII.VerBen();
 //         IntimateClaimAssessorII.Act();
 //         IntimateClaimAssessorII.BenID();
@@ -154,6 +160,8 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 //        IntimateClaimAssessorII.PerII(PercentageII);
 //        IntimateClaimAssessorII.PerIII(PercentageIII);
 //           IntimateClaimAssessorII.Act(); // Always change xpath
+//        IntimateClaimAssessorII.VerBen();
+//        IntimateClaimAssessorII.Act();
 //        IntimateClaimAssessorII.ConfirmBAccount();  // Always change xpath
 //        IntimateClaimAssessorII.AccType(AccT);
 //        IntimateClaimAssessorII.BankN(BankNm);
@@ -164,34 +172,41 @@ public class IntimateClaimAssessorIIStep extends PageObject {
 //        IntimateClaimAssessorII.VAcc();
 //        IntimateClaimAssessorII.BurgerI();
 //        IntimateClaimAssessorII.Reco();
-//        IntimateClaimAssessorII.WYes();
+//       // IntimateClaimAssessorII.WYes();
 //        IntimateClaimAssessorII.CommentR(Recco);
-//
-//        //IntimateClaimAssessorII.Opt();
+//        //IntimateClaimAssessorII.Opt();  //This option doesnt appear all the time
 //        IntimateClaimAssessorII.SCommentBtn();
-
-       // IntimateClaimAssessorII.Yes();
+//
+      //  IntimateClaimAssessorII.Yes();
 //        IntimateClaimAssessorII.BurgerIX();
 //        IntimateClaimAssessorII.RecoI();
-//        IntimateClaimAssessorII.WYes();
+//        //IntimateClaimAssessorII.WYes();
 //        IntimateClaimAssessorII.CommentR(ReccoI);
-////        IntimateClaimAssessorII.Opt();
+////        IntimateClaimAssessorII.Opt();   //This option doesnt appear all the time
 //        IntimateClaimAssessorII.SCommentBtn();
-//        IntimateClaimAssessorII.Yes();
+        //IntimateClaimAssessorII.Yes();
+
 //        IntimateClaimAssessorII.BurgerII();
 //        IntimateClaimAssessorII.RecoII();
-//        IntimateClaimAssessorII.Yes();
+//       // IntimateClaimAssessorII.Yes();
 //        IntimateClaimAssessorII.CommentR(ReccoII);
-   // IntimateClaimAssessorII.Opt();
+////    IntimateClaimAssessorII.Opt();   //This option doesnt appear all the time
 //        IntimateClaimAssessorII.SCommentBtnII();
 //        IntimateClaimAssessorII.RecoIII();
 //        IntimateClaimAssessorII.ReCcoIII();
-//        IntimateClaimAssessorII.Yes();
+//      //  IntimateClaimAssessorII.Yes();
 //        IntimateClaimAssessorII.CommentR(ReccoIII);
-//        IntimateClaimAssessorII.Opt();
+//       // IntimateClaimAssessorII.Opt();   //This option doesnt appear all the time
 //        IntimateClaimAssessorII.SCommentBtn();
 
+        IntimateClaimAssessorII.BurgerIIII();
+        IntimateClaimAssessorII.RecP();
+       // IntimateClaimAssessorII.Yes();
+        IntimateClaimAssessorII.CommentR(ReccoIIII);
+       // IntimateClaimAssessorII.Opt();  //This option doesnt appear all the time
+        IntimateClaimAssessorII.SCommentBtn();
     }
+
 
 
 }

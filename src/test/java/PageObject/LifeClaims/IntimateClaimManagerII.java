@@ -21,17 +21,17 @@ public class IntimateClaimManagerII extends PageObject {
     String ManageTabXpath = "//*[@id=\"menuClaimsManagement\"]/a";
     String PaymentApXpath = "//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[1]/div[1]/ul/li[8]/a";
 
-    String DetailsApXpath = "//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[2]/table/tbody/tr/td[10]";
+    String DetailsApXpath = "//*[@id=\"claimGroupListMainDiv\"]/div[3]/div[2]/table/tbody/tr[2]/td[10]";
     String PolicyTabXpath = "//*[@id=\"tab-claimEvents\"]/div/div/div/div[1]/h3/a";
     String PayIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[1]/div[9]/div[3]/div/button";
-    String PayCXpath = "//*[@id=\"tabClaims-1ccce18f-8b08-c99e-104c-08dc3e88b45d\"]/div[1]/div/div/div/div/div[1]/div[9]/div[3]/div/ul/li[1]/a";
+    String PayCXpath = "//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[1]/div[9]/div[3]/div/ul/li[1]/a";
     String YesXpath = "//*[@id=\"bsPromptModalPositiveBtn\"]";
     String CommentTxtBXpath = "//*[@id=\"txtComment\"]";
-    String PayCIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[7]/div[9]/div[3]/div/ul/li[1]/a";
+    String PayCIIIXpath = "//*[@id=\"tabClaims-7680fb68-c45e-c25b-cf46-08dc0156019b\"]/div[1]/div/div/div/div/div[7]/div[9]/div[3]/div/ul/li[1]/a";
     String PayIIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[7]/div[9]/div[3]/div/button/i";
     String SvBtnXpath = "//*[@id=\"btnSaveComment\"]";
     String PayIIXpath = "//*[@id=\"tabClaims-adde3cfd-d8c4-ccba-4524-08dc231b4d7b\"]/div[1]/div/div/div/div/div[4]/div[9]/div[3]/div/button";
-    String PayCIIXpath = "//*[@id=\"tabClaims-1ccce18f-8b08-c99e-104c-08dc3e88b45d\"]/div[1]/div/div/div/div/div[4]/div[9]/div[3]/div/ul/li[1]/a";
+    String PayCIIXpath = "//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[4]/div[9]/div[3]/div/ul/li[1]/a";
 
 
 
@@ -162,7 +162,7 @@ public class IntimateClaimManagerII extends PageObject {
 
     @Step("Comment")
     public void CommentsII(String ReccoComII) {
-        WebElement ReccomendC = $(By.xpath(CommentTxtBXpath));
+        WebElement ReccomendC = $(By.xpath("//*[@id=\"txtComment\"]"));
         ReccomendC.click();
         ReccomendC.sendKeys(ReccoComII);
 
@@ -172,11 +172,11 @@ public class IntimateClaimManagerII extends PageObject {
 
     @Step("Click MBurger menu III")
     public void MBurgerIII() {
-        $(By.xpath(PayIIIXpath)).click();
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(11) > div:nth-child(3) > div:nth-child(1) > button:nth-child(1) > i:nth-child(1)")).click();
     }
     @Step("Click on pay Claim III")
     public void PayCIII() {
-        $(By.xpath(PayCIIIXpath)).click();
+        $(By.xpath("//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[7]/div[9]/div[3]/div/ul/li[1]/a")).click();
     }
     @Step("Comment")
     public void CommentsIII (String ReccoComIII) {
@@ -187,7 +187,47 @@ public class IntimateClaimManagerII extends PageObject {
 
     @Step("Save the Comment afterwards")
     public void SCommentBtnII() {
+        $(By.xpath("//*[@id=\"txtComment\"]")).click();
+    }
+
+    @Step("Click MBurger menu III")
+    public void MBurgerIIII() {
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(10) > div:nth-child(11) > div:nth-child(3) > div:nth-child(1) > button:nth-child(1)")).click();
+    }
+    @Step("Click on pay Claim III")
+    public void PayCIIII() {
+        $(By.xpath("//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[10]/div[9]/div[3]/div/ul/li[1]/a")).click();
+    }
+    @Step("Comment")
+    public void CommentsIIII (String ReccoComIIII) {
+        WebElement ReccomendC = $(By.xpath("//*[@id=\"txtComment\"]"));
+        ReccomendC.click();
+        ReccomendC.sendKeys(ReccoComIIII);
+    }
+
+    @Step("Save the Comment afterwards")
+    public void SCommentBtnIIII() {
+        $(By.xpath("//*[@id=\"btnSaveComment\"]")).click();
+    }
+    @Step("Click MBurger menu L")
+    public void MBurgerL() {
+        $(By.cssSelector("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(17) > div:nth-child(9) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(13) > div:nth-child(11) > div:nth-child(3) > div:nth-child(1) > button:nth-child(1)")).click();
+    }
+    @Step("Click on pay Claim l")
+    public void PayCL() {
+        $(By.xpath("//*[@id=\"tabClaims-c00b8d7d-0232-c282-f0d4-08dc435ed230\"]/div[1]/div/div/div/div/div[13]/div[9]/div[3]/div/ul/li[1]/a")).click();
+    }
+    @Step("Comment L")
+    public void CommentsL (String ReccoComL) {
+        WebElement ReccomendC = $(By.xpath("//*[@id=\"txtComment\"]"));
+        ReccomendC.click();
+        ReccomendC.sendKeys(ReccoComL);
+    }
+
+    @Step("Save the Comment afterwards L")
+    public void SCommentBtnL() {
         $(By.xpath(SvBtnXpath)).click();
     }
 }
+
 
